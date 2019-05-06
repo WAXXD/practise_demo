@@ -1,0 +1,22 @@
+server:
+  port: 34001
+
+spring:
+  application:
+    name: mszuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://mseureka2:31002/eureka/,http://mseureka1:31001/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: mszuul
+
+
+zuul:
+  routes:
+    provider.serviceId: provider001 # "*"
+    provider.path: /app/**
+  ignored-services: provider001
+

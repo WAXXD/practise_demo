@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+<base href="<%=basePath %>">
+<script type="text/javascript" th:src="@{js/jquery-1.7.2.min.js}"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+           
+		var param = {strs:['col1','col2','col3']};
+		function send(){
+            $.ajax({
+                url:"http://localhost:32003/test",
+                type:"delete",
+                data:param,
+                async:false,
+                dataType:"json",
+                cache:false
+            });
+		}
+        </script>
+</head>
+
+<body>
+	
+	 <a href="javascript:send();">发送</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+server:
+  port: 32004
+
+
+spring:
+  application:
+    name: consumer004_feign_hystrix
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://mseureka2:31002/eureka/,http://mseureka1:31001/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: consumer004_feign_hystrix
+
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,22 @@
+server:
+  port: 32003
+
+
+spring:
+  application:
+    name: consumer003_ribbon
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+    servlet:
+      content-type: text/html
+    prefix: classpath:/templates/
+    suffix: .html
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://mseureka2:31002/eureka/,http://mseureka1:31001/eureka/
+  instance:
+    prefer-ip-address: true
+

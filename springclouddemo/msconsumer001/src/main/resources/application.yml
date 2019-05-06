@@ -1,0 +1,13 @@
+server:
+  port: 32001
+
+
+spring:
+  application:
+    name: consumer001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://mseureka2:31002/eureka/,http://mseureka1:31001/eureka/
+  instance:
+    prefer-ip-address: true

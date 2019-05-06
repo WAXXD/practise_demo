@@ -1,0 +1,20 @@
+server:
+  port: 33001
+
+
+spring:
+  application:
+    name: provider001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://mseureka2:31002/eureka/,http://mseureka1:31001/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: provider001_Hystrix
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
